@@ -77,7 +77,7 @@ router.post("/resetpassword", async function (request, response) {
       let mailid = request.body.email;
       let rString = randomstring.generate(7);
       let link =
-        "https://password-reset-front-end.vercel.app/reset-password-page";
+        "https://password-reset-taskk.netlify.app/reset-password-page";
       await db
         .collection("users")
         .updateOne({ email: mailid }, { $set: { rString: rString } });
