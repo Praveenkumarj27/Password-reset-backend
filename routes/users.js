@@ -96,7 +96,7 @@ router.post("/resetpassword", async function (request, response) {
         to: mailid,
         subject: "Password Reset",
         text: `Your Random text is ${rString}. Click the link to reset password ${link}`,
-        html: `<h2> Your Random text is ${rString}. Click the link to reset password ${link}</h2>`,
+        html: `<h2> Your Random text is ${rString}. Click the link to reset password <a href=${link}>Click here</a></h2>`,
       };
 
       transporter.sendMail(mailOptions, function (error, info) {
